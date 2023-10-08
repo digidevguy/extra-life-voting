@@ -9,7 +9,6 @@ export async function GET() {
 		.from('games')
 		.select('id,title')
 		.order('title', { ascending: false });
-	console.log(data);
 
 	if (error) {
 		return NextResponse.json(

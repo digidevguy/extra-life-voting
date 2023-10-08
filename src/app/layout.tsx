@@ -9,6 +9,8 @@ export const metadata: Metadata = {
 	description: 'A small form to vote for a game to play during Extra Life',
 };
 
+export const dynamic = 'force-dynamic';
+
 export default function RootLayout({
 	children,
 }: {
