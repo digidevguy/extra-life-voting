@@ -1,10 +1,11 @@
 import RealTimeVotes from './realtime-votes';
-import { createServerSupabaseClient } from '@/libs/supabase';
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
+import { cookies } from 'next/headers';
 
 export const dynamic = 'force-dynamic';
 
 export default async function Table() {
-	const supabase = await createServerSupabaseClient();
+	const supabase = await createServerComponentClient({ cookies });
 
 	const { data, error } = await supabase
 		.from('games')
