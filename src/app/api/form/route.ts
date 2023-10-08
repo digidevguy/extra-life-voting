@@ -8,7 +8,7 @@ export async function GET() {
 	const { data, error } = await supabase
 		.from('games')
 		.select('id,title')
-		.order('title', { ascending: false });
+		.order('title', { ascending: true });
 
 	if (error) {
 		return NextResponse.json(
