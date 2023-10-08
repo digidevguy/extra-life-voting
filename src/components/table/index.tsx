@@ -1,6 +1,8 @@
 import RealTimeVotes from './realtime-votes';
 import { createServerSupabaseClient } from '@/libs/supabase';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Table() {
 	const supabase = await createServerSupabaseClient();
 
